@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <fileVersion>5</fileVersion>
+    <fileChecksum>3785829900</fileChecksum>
+    <configuration>
+        <name>Release</name>
+        <outputs>
+            <file>$PROJ_DIR$\..\usr\src\getopt.c</file>
+            <file>$PROJ_DIR$\..\usr\src\main.c</file>
+            <file>$PROJ_DIR$\..\usr\src\system_stm32f4xx.c</file>
+            <file>$PROJ_DIR$\..\usr\src\shell.c</file>
+            <file>$PROJ_DIR$\..\usr\src\stm32f4xx_it.c</file>
+            <file>$PROJ_DIR$\..\usr\src\stm32f4xx_hal_msp.c</file>
+            <file>$PROJ_DIR$\..\driver\src\stm32f407_driver_ttp229_interface.c</file>
+            <file>$PROJ_DIR$\..\..\..\src\driver_ttp229.c</file>
+            <file>$PROJ_DIR$\..\..\..\example\driver_ttp229_basic.c</file>
+            <file>$PROJ_DIR$\..\..\..\test\driver_ttp229_read_test.c</file>
+        </outputs>
+        <forcedrebuild>
+            <name>[REBUILD_ALL]</name>
+        </forcedrebuild>
+    </configuration>
+</project>
