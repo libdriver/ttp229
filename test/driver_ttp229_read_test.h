@@ -52,9 +52,9 @@ extern "C"{
 
 /**
  * @brief     read test
- * @param[in] interface is the set interface
- * @param[in] active_level is the set active level
- * @param[in] times is the read times
+ * @param[in] interface set interface
+ * @param[in] active_level set active level
+ * @param[in] times read times
  * @return    status code
  *            - 0 success
  *            - 1 test failed

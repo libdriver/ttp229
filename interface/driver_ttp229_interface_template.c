@@ -62,9 +62,9 @@ uint8_t ttp229_interface_iic_deinit(void)
 
 /**
  * @brief      interface iic bus read command
- * @param[in]  addr is iic device write address
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the length of the data buffer
+ * @param[in]  addr iic device write address
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len length of the data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -101,8 +101,8 @@ uint8_t ttp229_interface_spi_deinit(void)
 
 /**
  * @brief      interface spi bus read command
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the length of data buffer
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len length of data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -115,7 +115,7 @@ uint8_t ttp229_interface_spi_read_cmd(uint8_t *buf, uint16_t len)
 
 /**
  * @brief     interface delay ms
- * @param[in] ms
+ * @param[in] ms time
  * @note      none
  */
 void ttp229_interface_delay_ms(uint32_t ms)
@@ -125,7 +125,7 @@ void ttp229_interface_delay_ms(uint32_t ms)
 
 /**
  * @brief     interface print format data
- * @param[in] fmt is the format data
+ * @param[in] fmt format data
  * @note      none
  */
 void ttp229_interface_debug_print(const char *const fmt, ...)

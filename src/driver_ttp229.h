@@ -121,72 +121,72 @@ typedef struct ttp229_info_s
 
 /**
  * @brief     initialize ttp229_handle_t structure
- * @param[in] HANDLE points to a ttp229 handle structure
- * @param[in] STRUCTURE is ttp229_handle_t
+ * @param[in] HANDLE pointer to a ttp229 handle structure
+ * @param[in] STRUCTURE ttp229_handle_t
  * @note      none
  */
 #define DRIVER_TTP229_LINK_INIT(HANDLE, STRUCTURE)          memset(HANDLE, 0, sizeof(STRUCTURE))
 
 /**
  * @brief     link iic_init function
- * @param[in] HANDLE points to a ttp229 handle structure
- * @param[in] FUC points to an iic_init function address
+ * @param[in] HANDLE pointer to a ttp229 handle structure
+ * @param[in] FUC pointer to an iic_init function address
  * @note      none
  */
 #define DRIVER_TTP229_LINK_IIC_INIT(HANDLE, FUC)           (HANDLE)->iic_init = FUC
 
 /**
  * @brief     link iic_deinit function
- * @param[in] HANDLE points to a ttp229 handle structure
- * @param[in] FUC points to an iic_deinit function address
+ * @param[in] HANDLE pointer to a ttp229 handle structure
+ * @param[in] FUC pointer to an iic_deinit function address
  * @note      none
  */
 #define DRIVER_TTP229_LINK_IIC_DEINIT(HANDLE, FUC)         (HANDLE)->iic_deinit = FUC
 
 /**
  * @brief     link iic_read_cmd function
- * @param[in] HANDLE points to a ttp229 handle structure
- * @param[in] FUC points to an iic_read_cmd function address
+ * @param[in] HANDLE pointer to a ttp229 handle structure
+ * @param[in] FUC pointer to an iic_read_cmd function address
  * @note      none
  */
 #define DRIVER_TTP229_LINK_IIC_READ_CMD(HANDLE, FUC)       (HANDLE)->iic_read_cmd = FUC
 
 /**
  * @brief     link spi_init function
- * @param[in] HANDLE points to a ttp229 handle structure
- * @param[in] FUC points to an spi_init function address
+ * @param[in] HANDLE pointer to a ttp229 handle structure
+ * @param[in] FUC pointer to an spi_init function address
  * @note      none
  */
 #define DRIVER_TTP229_LINK_SPI_INIT(HANDLE, FUC)           (HANDLE)->spi_init = FUC
 
 /**
  * @brief     link spi_deinit function
- * @param[in] HANDLE points to a ttp229 handle structure
- * @param[in] FUC points to an spi_deinit function address
+ * @param[in] HANDLE pointer to a ttp229 handle structure
+ * @param[in] FUC pointer to an spi_deinit function address
  * @note      none
  */
 #define DRIVER_TTP229_LINK_SPI_DEINIT(HANDLE, FUC)         (HANDLE)->spi_deinit = FUC
 
 /**
  * @brief     link spi_read_cmd function
- * @param[in] HANDLE points to a ttp229 handle structure
- * @param[in] FUC points to an spi_read_cmd function address
+ * @param[in] HANDLE pointer to a ttp229 handle structure
+ * @param[in] FUC pointer to an spi_read_cmd function address
  * @note      none
  */
 #define DRIVER_TTP229_LINK_SPI_READ_CMD(HANDLE, FUC)       (HANDLE)->spi_read_cmd = FUC
 
 /**
  * @brief     link delay_ms function
- * @param[in] HANDLE points to a ttp229 handle structure
- * @param[in] FUC points to a delay_ms function address
+ * @param[in] HANDLE pointer to a ttp229 handle structure
+ * @param[in] FUC pointer to a delay_ms function address
  * @note      none
  */
 #define DRIVER_TTP229_LINK_DELAY_MS(HANDLE, FUC)           (HANDLE)->delay_ms = FUC
 
 /**
  * @brief     link debug_print function
- * @param[in] HANDLE points to a ttp229 handle structure
- * @param[in] FUC points to a debug_print function address
+ * @param[in] HANDLE pointer to a ttp229 handle structure
+ * @param[in] FUC pointer to a debug_print function address
  * @note      none
  */
 #define DRIVER_TTP229_LINK_DEBUG_PRINT(HANDLE, FUC)        (HANDLE)->debug_print = FUC
@@ -204,7 +204,7 @@ typedef struct ttp229_info_s
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to a ttp229 info structure
+ * @param[out] *info pointer to a ttp229 info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -214,8 +214,8 @@ uint8_t ttp229_info(ttp229_info_t *info);
 
 /**
  * @brief     set the interface
- * @param[in] *handle points to a ttp229 handle structure
- * @param[in] interface is the chip interface
+ * @param[in] *handle pointer to a ttp229 handle structure
+ * @param[in] interface chip interface
  * @return    status code
  *            - 0 success
  *            - 2 handle is NULL
@@ -225,8 +225,8 @@ uint8_t ttp229_set_interface(ttp229_handle_t *handle, ttp229_interface_t interfa
 
 /**
  * @brief      get the interface
- * @param[in]  *handle points to a ttp229 handle structure
- * @param[out] *interface points to a chip interface buffer
+ * @param[in]  *handle pointer to a ttp229 handle structure
+ * @param[out] *interface pointer to a chip interface buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -236,7 +236,7 @@ uint8_t ttp229_get_interface(ttp229_handle_t *handle, ttp229_interface_t *interf
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to a ttp229 handle structure
+ * @param[in] *handle pointer to a ttp229 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic or spi initialization failed
@@ -248,7 +248,7 @@ uint8_t ttp229_init(ttp229_handle_t *handle);
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to a ttp229 handle structure
+ * @param[in] *handle pointer to a ttp229 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 iic or spi deinit failed
@@ -260,8 +260,8 @@ uint8_t ttp229_deinit(ttp229_handle_t *handle);
 
 /**
  * @brief     set the active level
- * @param[in] *handle points to a ttp229 handle structure
- * @param[in] active_level is the set active level
+ * @param[in] *handle pointer to a ttp229 handle structure
+ * @param[in] active_level set active level
  * @return    status code
  *            - 0 success
  *            - 2 handle is NULL
@@ -272,8 +272,8 @@ uint8_t ttp229_set_active(ttp229_handle_t *handle, ttp229_active_t active_level)
 
 /**
  * @brief      get the active level
- * @param[in]  *handle points to a ttp229 handle structure
- * @param[out] *active_level points to an active level buffer
+ * @param[in]  *handle pointer to a ttp229 handle structure
+ * @param[out] *active_level pointer to an active level buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -284,8 +284,8 @@ uint8_t ttp229_get_active(ttp229_handle_t *handle, ttp229_active_t *active_level
 
 /**
  * @brief      read 16 keys
- * @param[in]  *handle points to a ttp229 handle structure
- * @param[out] *keys points to a key buffer
+ * @param[in]  *handle pointer to a ttp229 handle structure
+ * @param[out] *keys pointer to a key buffer
  * @return     status code
  *             - 0 success
  *             - 1 read 16 keys failed
@@ -297,8 +297,8 @@ uint8_t ttp229_read_16_keys(ttp229_handle_t *handle, uint8_t keys[16]);
 
 /**
  * @brief      read 8 keys
- * @param[in]  *handle points to a ttp229 handle structure
- * @param[out] *keys points to a key buffer
+ * @param[in]  *handle pointer to a ttp229 handle structure
+ * @param[out] *keys pointer to a key buffer
  * @return     status code
  *             - 0 success
  *             - 1 read 8 keys failed
@@ -321,9 +321,9 @@ uint8_t ttp229_read_8_keys(ttp229_handle_t *handle, uint8_t keys[8]);
 
 /**
  * @brief      get the chip register
- * @param[in]  *handle points to a ttp229 handle structure
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the data length
+ * @param[in]  *handle pointer to a ttp229 handle structure
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len data length
  * @return     status code
  *             - 0 success
  *             - 1 read failed
