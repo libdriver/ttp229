@@ -52,8 +52,8 @@ extern "C"{
 
 /**
  * @brief     basic example init
- * @param[in] interface is the set interface
- * @param[in] active_level is the set active level
+ * @param[in] interface set interface
+ * @param[in] active_level set active level
  * @return    status code
  *            - 0 success
  *            - 1 init failed
@@ -72,7 +72,7 @@ uint8_t ttp229_basic_deinit(void);
 
 /**
  * @brief      basic example read 16 keys
- * @param[out] *keys points to a key buffer
+ * @param[out] *keys pointer to a key buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -82,7 +82,7 @@ uint8_t ttp229_basic_read_16_keys(uint8_t keys[16]);
 
 /**
  * @brief      basic example read 8 keys
- * @param[out] *keys points to a key buffer
+ * @param[out] *keys pointer to a key buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
