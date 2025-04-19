@@ -9,7 +9,7 @@
 
 Der TTP229 TonTouch IC ist ein kapazitives Sensordesign speziell für Touchpad-Steuerungen. Das Gerät verfügt über einen integrierten Regler für den Touchsensor. Die stabile Sensormethode kann verschiedene Bedingungen abdecken. Bedienfeldverbindungen für Benutzeroberflächen werden über nichtleitendes dielektrisches Material hergestellt. Die Hauptanwendung konzentriert sich auf den Ersatz mechanischer Schalter oder Tasten. Der ASSP kann 8 oder bis zu 16 Touchpads unabhängig voneinander handhaben.
 
-LibDriver TTP229 ist der voll funktionsfähige Treiber von ttp229, der von LibDriver eingeführt wurde. TTP229 bietet Touch-Reading und andere Funktionen. LibDriver ist MISRA-kompatibel.
+LibDriver TTP229 ist der voll funktionsfähige Treiber von TTP229, der von LibDriver eingeführt wurde. TTP229 bietet Touch-Reading und andere Funktionen. LibDriver ist MISRA-kompatibel.
 
 ### Inhaltsverzeichnis
 
