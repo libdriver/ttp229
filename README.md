@@ -9,7 +9,7 @@
 
 The TTP229 TonTouch IC is capacitive sensing design specifically for touch pad controls.The device built in regulator for touch sensor. Stable sensing method can cover diversity conditions.Human interfaces control panel links through non-conductive dielectric material. The main applicationis focused at replacing of the mechanical switch or button. The ASSP can independently handle the 8 touch pads or up to 16 touch pads.
 
-LibDriver TTP229 is a full-featured driver of TTP229 launched by LibDriver. TTP229 provides touch reading and other functions. LibDriver complies with MISRA.
+LibDriver TTP229 is a full-featured driver for TTP229, launched by LibDriver. TTP229 provides touch reading and additional features. LibDriver is MISRA compliant.
 
 ### Table of Contents
 

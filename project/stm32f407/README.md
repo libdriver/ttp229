@@ -60,7 +60,7 @@ We use '\n' to wrap lines.If your serial port assistant displays exceptions (e.g
    ttp229 (-p | --port)
    ```
 
-5. Run ttp229 read test, num means the test times. 
+4. Run ttp229 read test, num means the test times. 
 
    ```shell
    ttp229 (-t read | --test=read) [--level=<low | high>] [--interface=<iic | spi>] [--times=<num>]
@@ -72,7 +72,7 @@ We use '\n' to wrap lines.If your serial port assistant displays exceptions (e.g
    ttp229 (-e read16 | --example=read16) [--level=<low | high>] [--interface=<iic | spi>] [--times=<num>]
    ```
 
-7. Run ttp229 read8 function, num means the read times.
+6. Run ttp229 read8 function, num means the read times.
 
    ```shell
    ttp229 (-e read8 | --example=read8) [--level=<low | high>] [--interface=<iic | spi>] [--times=<num>]
