@@ -289,18 +289,18 @@ uint8_t ttp229_deinit(ttp229_handle_t *handle)
 
     if (handle->iic_spi == (uint8_t)TTP229_INTERFACE_IIC)             /* iic interface */
     {
-        if (handle->iic_init() != 0)                                  /* iic init */
+        if (handle->iic_deinit() != 0)                                /* iic deinit */
         {
-            handle->debug_print("ttp229: iic init failed.\n");        /* iic init failed */
+            handle->debug_print("ttp229: iic deinit failed.\n");      /* iic deinit failed */
 
             return 1;                                                 /* return error */
         }
     }
     else                                                              /* spi interface */
     {
-        if (handle->spi_init() != 0)                                  /* spi init */
+        if (handle->spi_deinit() != 0)                                /* spi deinit */
         {
-            handle->debug_print("ttp229: spi init failed.\n");        /* spi init failed */
+            handle->debug_print("ttp229: spi deinit failed.\n");      /* spi deinit failed */
 
             return 1;                                                 /* return error */
         }

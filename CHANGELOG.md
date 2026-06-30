@@ -1,3 +1,9 @@
+## 1.0.6 (2026-07-01)
+
+## Bug Fixes
+
+- fix deinit bugs
+
 ## 1.0.5 (2025-10-26)
 
 ## Features
