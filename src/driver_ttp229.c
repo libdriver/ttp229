@@ -344,7 +344,9 @@ uint8_t ttp229_read_16_keys(ttp229_handle_t *handle, uint8_t keys[16])
     for (i = 0; i < 16; i++)                                       /* loop all */
     {
         keys[i] = (buf[i / 8] >> (7 - i % 8)) & 0x01;              /* get one key */
-        if (handle->active == (uint8_t)(TTP229_ACTIVE_LOW))        /* if active low */
+        
+        if ((handle->iic_spi == (uint8_t)TTP229_INTERFACE_SPI) &&
+            (handle->active == (uint8_t)(TTP229_ACTIVE_LOW)))      /* if active low */
         {
             keys[i] = !keys[i];                                    /* revert */
         }
@@ -387,7 +389,9 @@ uint8_t ttp229_read_8_keys(ttp229_handle_t *handle, uint8_t keys[8])
     for (i = 0; i < 8; i++)                                        /* loop all */
     {
         keys[i] = (buf[i / 8] >> (7 - i % 8)) & 0x01;              /* get one key */
-        if (handle->active == (uint8_t)(TTP229_ACTIVE_LOW))        /* if active low */
+        
+        if ((handle->iic_spi == (uint8_t)TTP229_INTERFACE_SPI) &&
+            (handle->active == (uint8_t)(TTP229_ACTIVE_LOW)))      /* if active low */
         {
             keys[i] = !keys[i];                                    /* revert */
         }
